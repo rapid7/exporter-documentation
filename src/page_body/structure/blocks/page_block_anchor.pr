@@ -1,2 +1,2 @@
 {[ let block = context /]}
-<div class="anchor" id="{{ getSearchIDString(block.id) }}" aria-hidden="true"></div>
+<a id="search-{{ block.id }}"></a>

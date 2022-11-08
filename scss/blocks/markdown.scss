@@ -1,19 +1,14 @@
 /* =================================== */
 /*  Markdown
 /* =================================== */
-.content-block--markdown {
+.markdown-container {
   img {
     border-radius: var(--borderRadiusDefault);
-    margin-bottom: var(--contentBlockGap);
-  }
-
-  .code-toolbar {
-    margin-bottom: var(--contentBlockGap);
   }
 
   &.bordered {
     padding: 16px;
-    border: 1px solid var(--colorBorderSubtle);
+    border: 1px solid var(--colorBorderColorSubtle);
     border-radius: var(--borderRadiusDefault);
   }
 
@@ -21,9 +16,5 @@
     padding: 16px;
     background: var(--colorBackgroundSecondary);
     border-radius: var(--borderRadiusDefault);
-  }
-
-  ul, ol {
-    margin-bottom: var(--contentBlockGap);
   }
 }

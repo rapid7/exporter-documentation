@@ -4,6 +4,6 @@
 
 {[ let variant = block.variantKey /]}
 
-<div class="content-block content-block--token-group-container{{ getVariantClass(variant) }}">
+<div class="token-group-container variant-{{variant}}">
   {[ inject "page_block_token_group_loop" context ({"block": block, "group": group }) /]}
 </div>

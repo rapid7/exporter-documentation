@@ -65,14 +65,3 @@ function slugify(str: string)
 
     return str;
 }
-
-
-// Sort components alphabetically
-export function sortComponentsAlphabetically(components: any[])
-{
-    components.sort(function(a, b) {
-        return a.name.localeCompare(b.name)
-    });
-
-    return components;
-}

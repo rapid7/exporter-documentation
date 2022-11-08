@@ -8,10 +8,10 @@ $(window).on('load', function() {
     // Store and restore menu scroll offset
     const scroll = localStorage.getItem('menu.scroll.position.top');
     if (scroll) {
-        $('.sidebar-navigation').scrollTop(scroll);
+        $('.bg-sidebar').scrollTop(scroll);
     }
 
-    document.querySelectorAll('.sidebar-navigation').forEach(section => {
+    document.querySelectorAll('.bg-sidebar').forEach(section => {
         section.addEventListener(
             'scroll',
             function() {
@@ -628,32 +628,17 @@ $(document).ready(function() {
 ------------------------------- */
 
 $('#sidebarCollapse').on('click', function(e) {
-    $('#side-navigation').toggleClass('nav-open');
+    // Toggle the dark / light mode when clicking the mode selector
+    $('.docs-navigation').toggleClass('d-inline');
     e.preventDefault();
 });
-
-$(document).on('click', '.nav-open .bg-sidebar', function(e) {
-    $('#side-navigation').toggleClass('nav-open');
-    e.preventDefault();
-});
-
-$('#mobile-menu-selector').on('click', function(e) {
-    $('#side-navigation').removeClass('nav-open');
-    e.preventDefault();
-});
-
-$('#versions-selector').on('click', function(e) {
-    $('#side-navigation').removeClass('nav-open');
-    e.preventDefault();
-});
-
 
 /*------------------------
-   Component health status overlay
+   Health status overlay
 -------------------------- */
 
 $(document).ready(function() {
-    $('.content-block--component-health').on('click', function(e) {
+    $('.component-health-row').on('click', function(e) {
         const blockId = $(this).data('block-id');
         // Toggle the overlay
         $('#overlay-' + blockId).toggleClass('d-none');

@@ -5,27 +5,27 @@
 
 {* Ignore block if it doesn't have id set *}
 {[ if block.tokenId ]}
-  <div class="content-block content-block--token-container">
+  <div class="token-container">
 
   {[ const token = ds.tokenById(block.tokenId) /]}
 
     {[ if (variant === "table") ]}
     {* Displaying the token as a table row *}
-      <div class="token-table">
+      <table class="token-wrapper">
           {[ inject "page_block_token_variant_table_item" context token /]}
-      </div>
+      </table>
 
       {[ elseif (variant.contains("stack")) ]}
       {* Stack – Displaying the list of tokens as a stack (great for colors) *}
 
-        <div class="stack{{ getVariantClass(variant) }}">
+        <div class="stack {{ variant }}">
             {[ inject "page_block_token_variant_stack_item" context token /]}
         </div>
 
     {[ else ]}
     {* Default variant - displayed as a grid, support 2/3/4 items in a row (4 is default) *}
 
-      <div class="grid{{ getVariantClass(variant) }}">
+      <div class="grid {{ variant }}">
           {[ inject "page_block_token_variant_grid_item" context token /]}
       </div>
 

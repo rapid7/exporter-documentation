@@ -2,7 +2,6 @@
 
 {[ if token.tokenType.equals("Color") ]}
     <div class="preview checkered-background-light">
-        {[ inject "page_block_token_reference_badge" context token /]}
         <div class="color-preview" style="background-color: #{{ token.value.hex }};"></div>
     </div>
 {[ elseif token.tokenType.equals("Border")]}
@@ -47,13 +46,16 @@
     </div>
 {[ elseif token.tokenType.equals("Shadow")]}
     <div class="preview token-preview-container large">
-        <div class="token-type-shadow" style="box-shadow: {{ shadowDescription(token) }}"></div>
+        <div class="token-type-shadow" style="box-shadow: {{ shadowTokenValue(token) }}"></div>
     </div>
 {[ elseif token.tokenType.equals("Text")]}
     <div class="preview small-text">{{ token.value.text }}</div>
 {[ elseif token.tokenType.equals("Typography")]}
-    {[ const typographyCSS = convertTypographyTokenToCSS(token) /]}
-    <div class="preview" style="{{ typographyCSS }}">Ag</div>
+    {[ if token.value.fontSize ]}
+        <div class="preview" style="font-size: {{ token.value.fontSize.measure }}{{ measureTypeIntoReadableUnit(token.value.fontSize.unit) }} !important;">Ag</div>
+    {[ else ]}
+        <div class="preview" style="font-size: 12px !important;">Ag</div>
+    {[/]}
 {[ elseif token.tokenType.equals("GenericToken")]}
     <div class="preview small-text">{{ token.value.text }}</div>
 {[/]}

@@ -5,22 +5,25 @@
   width: 100%;
 }
 
-.content-block--image {
+.image-container {
   width: 100%;
-
-  img {
-    border-radius: var(--borderRadiusDefault);
-    display: inline-block;
-  }
+  margin: 24px 0px;
 }
 
-.caption {
-  font-size: var(--fontSizeSmall);
-  line-height: 1.3rem;
-  color: var(--colorInkSecondary);
-  margin-top: 0.5rem;
+.image-container img {
+  border-radius: var(--borderRadiusDefault);
 }
 
 td .image-container {
   margin: 8px 0px;
+}
+
+.image-container p {
+  font-size: 14px;
+  color: var(--colorInkSecondary);
+}
+
+.caption {
+  font-size: 14px;
+  color: var(--colorInkSecondary);
 }

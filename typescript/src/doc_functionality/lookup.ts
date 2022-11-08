@@ -1,8 +1,6 @@
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 // MARK: - Imports
 
-import { htmlSafeString } from "./sandbox"
-
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 // MARK: - Support
 
@@ -56,26 +54,6 @@ export function firstPageFromTop(documentationRoot: DocumentationGroup): Documen
     }
   }
   return null
-}
-
-/** Check if the page is a homepage */
-export function isHomepage(page: DocumentationPage, documentationRoot: DocumentationGroup): boolean {
-  
-  let homepagePage = firstPageFromTop(documentationRoot)
-  if (homepagePage !== null && page.id === homepagePage.id) {
-    return true;
-  }
-
-  return false;
-}
-
-/** Resolve menu label */
-export function resolveMenuLabel(page: DocumentationPage, documentationRoot: DocumentationGroup, overridenLabel: string): string {
-  if (isHomepage(page, documentationRoot) && overridenLabel !== "") { 
-    return overridenLabel;
-  } else {
-    return htmlSafeString(page.title);
-  }
 }
 
 /** Create flattened structure of pages */
@@ -142,11 +120,4 @@ export function isExportable(object: DocumentationPage | DocumentationGroup): bo
   } else {
     return false
   }
-}
-
-/** Get current timestamp, 
- *  e.g. to version custom.css with the date of publishing
- */
-export function getCurrentTimestamp(): string {
-  return Math.floor(Date.now()).toString();
 }
