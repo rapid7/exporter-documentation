@@ -34,7 +34,6 @@
     opacity: 0.8;
   }
 
-
   &.inline {
     padding-bottom: 0px;
     border-bottom: 0px;
@@ -91,14 +90,13 @@
   width: 100%;
   top: 50%;
   left: 50%;
-  font-size: var(--fontSizeSmall);;
+  font-size: var(--fontSizeSmall);
   background-color: var(--colorBackgroundPrimary);
   max-width: 375px;
   transform: translate(-50%, -50%);
   overflow: hidden;
   border-radius: var(--borderRadiusDefault);
   color: var(--colorInkPrimary);
-
 }
 
 .health-overlay-content .header {
@@ -288,7 +286,7 @@
   display: flex;
   flex-direction: column;
 
-  .component-checklist--grid {  
+  .component-checklist--grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 24px;
@@ -299,7 +297,7 @@
     flex-direction: row;
   }
 
-  .component-checklist--list {  
+  .component-checklist--list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 12px;
@@ -337,15 +335,15 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
-  
+
     p {
       margin: 0;
-  
+
       &.title {
         font-size: var(--fontSizeSmall);
         font-weight: var(--fontWeightBold);
       }
-  
+
       &.description {
         font-size: var(--fontSizeSmall);
         color: var(--colorInkSecondary);
@@ -375,7 +373,7 @@
   }
 
   .component-table-wrapper-inner {
-    overflow-x: auto;
+    overflow-x: visible;
     overflow-y: visible;
     width: 100%;
     /*margin-left: 100px;*/
@@ -399,7 +397,7 @@
 }
 
 .component-table-wrapper-inner table.data-table th {
-  font-size: var(--fontSizeSmall); 
+  font-size: var(--fontSizeSmall);
 }
 
 .component-table-wrapper-inner table.header-column thead tr:first-child,
