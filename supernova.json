@@ -8,7 +8,7 @@
   "workspaceName": "Rapid7 X",
   "designSystemName": "Platform Experience Hub",
   "designSystemVersionName": "Shared draft",
-  "exporterName": "Don't apply theme",
+  "exporterName": "Documentation (R7)",
   "write_to": ".build",
-  "description": "Note to our fellow developers: Install Supernova integration from the VSCode marketplace and then our  Don't apply theme exporter will synchronize design data and generate appropriate code from the  Shared draft design system every time you request it through the extension interface, fully automatically."
+  "description": "Note to our fellow developers: Install Supernova integration from the VSCode marketplace and then our  Documentation (R7) exporter will synchronize design data and generate appropriate code from the  Shared draft design system every time you request it through the extension interface, fully automatically."
 }
