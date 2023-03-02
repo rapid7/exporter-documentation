@@ -12,18 +12,16 @@
 <div class="tile-item frame-item{{ !context.showTitles ? "titleless" : "" }}">      
     <div class="preview frame {{ showChecker ? "checkered-background-light" : ""}}" style="background-color: {{ backgroundColor }}">
     {[ if frame.previewUrl ]}
-        <img src="{{ frame.previewUrl }}" alt="{{ frame.title }}" height="{{ frame.origin.height }}" width="{{ frame.origin.width }}" />
+        <img src="{{ frame.previewUrl }}" alt="{{ frame.title }}" />
     {[/]}
     
     </div>
-    {[ if (context.showTitles && frame.title) ]}
-        <div class="meta">
+    {[ if context.showTitles ]}
         {[ if frame.title ]}
             <p class="title">{{ withHTMLNewlines(frame.title) }}</p>
         {[/]}
         {[ if frame.description ]}
             <p class="description">{{ withHTMLNewlines(frame.description) }}</p>    
         {[/]}
-        </div>
     {[/]}
 </div>

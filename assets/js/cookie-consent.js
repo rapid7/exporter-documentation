@@ -41,7 +41,7 @@ function CookieConsent(props) {
         "body": "We use cookies to personalize content and analyze traffic to our documentation.",
         "privacyPolicy": "privacy policy",
         "buttonAcceptAll": "Allow all cookies",
-        "buttonAcceptTechnical": "Reject non-essential cookies",
+        "buttonAcceptTechnical": "Allow only necessary cookies"
     };
 
     for (let contentProperty in props.content) {
@@ -60,7 +60,6 @@ function CookieConsent(props) {
         if (self.props.blockAccess) {
             modalClass += " block-access"
         }
-        
         self.modalContent = '<!-- cookie banner => https://github.com/shaack/cookie-consent-js -->' +
             '<div class="' + modalClass + '">' +
             '<div class="modal-content-wrap ' + self.props.position + '">' +
