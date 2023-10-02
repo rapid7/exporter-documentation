@@ -1,0 +1,14 @@
+---
+info:
+  title: Exporter Documentation
+  x-cortex-git:
+    github:
+      alias: r7org
+      repository: rapid7/exporter-documentation
+  x-cortex-tag: exporter-documentation
+  x-cortex-type: service
+  x-cortex-domain-parents:
+  - tag: platform
+openapi: 3.0.1
+servers:
+- url: "/"
