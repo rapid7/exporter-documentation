@@ -8,7 +8,7 @@ info:
   x-cortex-tag: exporter-documentation
   x-cortex-type: service
   x-cortex-domain-parents:
-  - tag: platform
+  - tag: platform-ux
 openapi: 3.0.1
 servers:
 - url: "/"
